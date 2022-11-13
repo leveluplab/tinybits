@@ -1,3 +1,55 @@
-.test {
-    color: #f00;
+.h1, h2, p, input, label, a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    padding: 100px;
+}
+
+.form {
+    input {
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .input-container {
+        margin-top: 20px;
+        input {
+            margin-left: 10px;
+        }
+    }
+
+    .add-btn {
+        margin-top: 20px;
+        padding: 10px 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        margin-left: 24px;
+        font-size: 20px;
+
+        &.enabled {
+            background: #2196f3;
+            border: 1px solid #2196f3;
+            color: #fff;
+        }
+    }
+
+    .result-container {
+        p {
+            font-size: 32px;
+        }
+    }
+}
+
+.home-page {
+    .link-to-about-page {
+        .a {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    }
 }

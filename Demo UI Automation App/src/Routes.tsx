@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import App from "./App";
-import Test from "./Test";
+import Home from "./Home";
+import Done from "./Done";
 
 const appRouting = (
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/test" element={<Test />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/done" element={<Done />} />
     </Routes>
   </Router>
 );
