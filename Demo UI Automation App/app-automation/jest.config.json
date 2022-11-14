@@ -1,0 +1,8 @@
+{
+    "setupFilesAfterEnv": [
+        "./assertions.js"
+    ],
+    "testMatch": [
+        "<rootDir>/tests/*.test.js"
+    ]
+}
