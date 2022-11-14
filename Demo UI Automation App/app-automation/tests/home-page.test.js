@@ -15,10 +15,12 @@ describe.each(permutations)('App %s %s', (banner, breakpoint) => {
     });
     
     test('Test homepage', async () => {
-        await app.homePage.validatePage();
+        await expect(app.page).toHaveElement(app.homePage.pageEl);
         await app.homePage.fillFormAndSum();
         const sumElement = await app.page.$(app.homePage.sum);
         const sumText = await app.page.evaluate((el) => el.textContent, sumElement);
         await expect(sumText).toBe('15');
+        await app.page.click(app.homePage.linktoCompletion);
+        await expect(app.page).toHaveElement(app.donePage.pageEl);
     }, 80000);
 });

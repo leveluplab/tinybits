@@ -29,6 +29,7 @@ module.exports = {
         permutation.banner = opts.banner;
 
         // visit baseUrl
+        process.env.HOST = permutation.baseurl;
         await page.goto(permutation.baseurl);
     },
 
