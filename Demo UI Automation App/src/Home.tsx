@@ -10,7 +10,7 @@ const Home = () => {
     }
     return <div className="page home-page">
         <h1>Hello Developers</h1>
-        <h2>This is a demo app to learn UI automation</h2> <br />
+        <h2 data-auid="home-page">This is a demo app to learn UI automation</h2> <br />
         <h3>Add 2 numbers and display result</h3>
         <form className="form">
             <div className="input-container">
@@ -19,6 +19,7 @@ const Home = () => {
                     type="text"
                     id="a"
                     value={a}
+                    data-auid="input-a"
                     onChange={(e) => {setA(e.target.value)}}
                 />
             </div>
@@ -28,21 +29,23 @@ const Home = () => {
                     type="text"
                     id="b"
                     value={b}
+                    data-auid="input-b"
                     onChange={(e) => {setB(e.target.value)}}
                 />
             </div>
             <button
                 type="button"
                 className="add-btn enabled"
+                data-auid="sum-button"
                 onClick={handleSum}
             >
                 Add numbers
             </button>
             <div className="result-container">
-                <p>A + B = {sum}</p>
+                <p>A + B = <span data-auid="sum">{sum}</span></p>
             </div>
         </form>
-        <div className="link-to-done">
+        <div className="link-to-done" data-auid="link-to-completion">
             <Link to="/done" >Got to completion message</Link>
         </div>
     </div>;

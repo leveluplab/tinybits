@@ -1,9 +1,9 @@
 import React from "react";
 
 const Done = () => {
-    return <div className="page done">
+    return <div className="page done" data-auid="done-page">
         <h1>Done</h1>
-        <p>This math exercise has been finished</p>
+        <p data-auid="done-msg">This math exercise has been finished</p>
     </div>;
 };
 
